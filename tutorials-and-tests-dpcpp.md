@@ -35,4 +35,4 @@ Many particle tests are not listed here because they require device API for rand
 | Particles/ParticleMesh | 3 | InvalidArraySize | | inputs |
 | ParticleReduce | 3 | OK | OK | inputs |
 | Particles/ParticleTransformations | 3 | InvalidArraySize | | inputs |
-| Tests/GPU/Vector | 3 | OK | OK | inputs |
+| GPU/Vector | 3 | OK | OK | inputs |
