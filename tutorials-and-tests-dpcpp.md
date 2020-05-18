@@ -1,6 +1,6 @@
 All tests are compiled with `make USE_DPCPP DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
-Many particle tests are not list here because they require device API for random number generator.
+Many particle tests are not listed here because they require device API for random number generator.
 
 ## amrex/Tutorials
 
