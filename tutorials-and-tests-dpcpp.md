@@ -10,7 +10,6 @@ Many particle tests are not listed here because they require device API for rand
 | Tutorials/HeatEquation_EX1_C/Exec | 3 | OK | OK | inputs |
 | Tutorials/HeatEquation_EX2_C/Exec | 3 | OK | OK | inputs nsteps=1000 |
 | Tutorials/HeatEquation_EX3_C/Exec | 2 | OK | OK | inputs_2d nsteps=100 |
-| Tutorials/HeatEquation_EX3_C/Exec | 3 | OK | kernel arguments size 1248 | inputs_3d |
 | Tutorials/GPU/Launch | 3 | OK | OK | |
 | Tutorials/GPU/ParallelReduce | 3 | OK | OK |  |
 | Tutorials/GPU/ParallelScan | 3 | OK | OK | |
@@ -32,6 +31,7 @@ Many particle tests are not listed here because they require device API for rand
 | Tutorials/LinearSolvers/ABecLaplacian_C | 3 | OK | OK | inputs-rt-poisson-lev |
 | Tutorials/LinearSolvers/ABecLaplacian_C | 3 | OK | kernel arguments size 1248 | inputs-rt-abeclap-com |
 | Tutorials/LinearSolvers/NodalPoisson | 3 | OK | OK | inputs-rt |
+| Tutorials/HeatEquation_EX3_C/Exec | 3 | OK | kernel arguments size 1248 | inputs_3d |
 
 # EB
 
