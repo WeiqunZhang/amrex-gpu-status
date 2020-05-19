@@ -1,6 +1,6 @@
-All compiled with `make USE_DPCPP DIM=<DIM>`.  They are run with `./<executable> <Inputs>.
+All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
-Many particle tests are not list here because they require device API for random number generator.
+Many particle tests are not listed here because they require device API for random number generator.
 
 ## amrex/Tutorials
 
@@ -35,4 +35,5 @@ Many particle tests are not list here because they require device API for random
 | Particles/ParticleMesh | 3 | OK | OK | inputs nx=64 ny=64 nz=64 nppc=4 |
 | ParticleReduce | 3 | OK | OK | inputs |
 | Particles/ParticleTransformations | 3 | OK | OK | inputs |
-| Tests/GPU/Vector | 3 | OK | OK | inputs |
+| GPU/Vector | 3 | OK | OK | inputs |
+
