@@ -32,7 +32,7 @@ Many particle tests are not list here because they require device API for random
 | LinearSolvers/EBTensor | 3 | OK | kernel arguments size 1212 | inputs.rt.3d |
 | LinearSolvers/NodeEB | 2 | OK | kernel arguments size 1480 | inputs.rt.2d |
 | LinearSolvers/NodeEB | 3 | OK | kernel arguments size 1212 | inputs.rt.3d.y |
-| Particles/ParticleMesh | 3 | InvalidArraySize | | inputs |
+| Particles/ParticleMesh | 3 | OK | OK | inputs nx=64 ny=64 nz=64 nppc=4 |
 | ParticleReduce | 3 | OK | OK | inputs |
-| Particles/ParticleTransformations | 3 | InvalidArraySize | | inputs |
+| Particles/ParticleTransformations | 3 | OK | OK | inputs |
 | Tests/GPU/Vector | 3 | OK | OK | inputs |
