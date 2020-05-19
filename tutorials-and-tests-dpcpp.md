@@ -13,6 +13,7 @@ Many particle tests are not listed here because they require device API for rand
 | Basic/HelloWorld_C  | 3 | OK | OK |        |
 | Amr/Advection_AmrCore/Exec/SingleVortex | 2 | OK | OK | inputs |
 | Amr/Advection_AmrCore/Exec/SingleVortex | 3 | OK | OK | inputs max_step=100 |
+| Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | abort | inputs.tracers |
 | LinearSolvers/ABecLaplacian_C | 3 | OK | OK | inputs-rt-poisson-lev |
 | LinearSolvers/ABecLaplacian_C | 3 | OK | kernel arguments size 1248 | inputs-rt-abeclap-com |
 | LinearSolvers/NodalPoisson | 3 | OK | OK | inputs-rt |
@@ -33,7 +34,11 @@ Many particle tests are not listed here because they require device API for rand
 | LinearSolvers/NodeEB | 2 | OK | kernel arguments size 1480 | inputs.rt.2d |
 | LinearSolvers/NodeEB | 3 | OK | kernel arguments size 1212 | inputs.rt.3d.y |
 | Particles/ParticleMesh | 3 | OK | OK | inputs nx=64 ny=64 nz=64 nppc=4 |
-| ParticleReduce | 3 | OK | OK | inputs |
-| Particles/ParticleTransformations | 3 | OK | OK | inputs |
+| Particles/ParticleReduce | 3 | OK | OK | inputs |
+| Particles/ParticleTransformations | 3 | OK | abort | inputs |
+| Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda redistribute.do_random=0 |
+| Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.sort redistribute.do_random=0 |
+| Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.nonperiodic redistribute.do_random=0 |
+| Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.mr redistribute.do_random=0 |
+| Particles/NeighborParticles | 3 | ADL | | inputs |
 | GPU/Vector | 3 | OK | OK | inputs |
-
