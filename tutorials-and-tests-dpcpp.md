@@ -29,9 +29,9 @@ Many particle tests are not listed here because they require device API for rand
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
 | Tutorials/LinearSolvers/ABecLaplacian_C | 3 | OK | OK | inputs-rt-poisson-lev |
-| Tutorials/LinearSolvers/ABecLaplacian_C | 3 | OK | kernel arguments size 1248 | inputs-rt-abeclap-com |
+| Tutorials/LinearSolvers/ABecLaplacian_C | 3 | OK | OK | inputs-rt-abeclap-com |
 | Tutorials/LinearSolvers/NodalPoisson | 3 | OK | OK | inputs-rt |
-| Tutorials/HeatEquation_EX3_C/Exec | 3 | OK | kernel arguments size 1248 | inputs_3d |
+| Tutorials/HeatEquation_EX3_C/Exec | 3 | OK | OK | inputs_3d |
 
 # EB
 
