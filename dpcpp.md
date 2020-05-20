@@ -1,6 +1,7 @@
-All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
-Many particle tests are not listed here because they require device API for random number generator.
+# Test Problems in AMReX
+
+All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
 ## Basic
 
@@ -15,7 +16,7 @@ Many particle tests are not listed here because they require device API for rand
 | Tutorials/GPU/ParallelScan | 3 | OK | OK | |
 | Tests/GPU/Vector | 3 | OK | OK | inputs |
 
-# AMR
+## AMR
 
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
@@ -24,7 +25,7 @@ Many particle tests are not listed here because they require device API for rand
 | Tutorials/GPU/Advection_AmrCore/Exec/SingleVortex | 3 | OK | OK | inputs |
 | Tutorials/GPU/CNS/Exec/RT | 3 | OK | OK | inputs-rt amrex.fpe_trap_invalid=0 |
 
-# Linear Solvers
+## Linear Solvers
 
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
@@ -33,7 +34,7 @@ Many particle tests are not listed here because they require device API for rand
 | Tutorials/LinearSolvers/NodalPoisson | 3 | OK | OK | inputs-rt |
 | Tutorials/HeatEquation_EX3_C/Exec | 3 | OK | OK | inputs_3d |
 
-# EB
+## EB
 
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
@@ -44,7 +45,7 @@ Many particle tests are not listed here because they require device API for rand
 | Tests/LinearSolvers/NodeEB | 2 | OK | kernel arguments size 1480 | inputs.rt.2d |
 | Tests/LinearSolvers/NodeEB | 3 | OK | kernel arguments size 1212 | inputs.rt.3d.y |
 
-# Particles
+## Particles
 
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
