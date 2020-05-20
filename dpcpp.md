@@ -38,7 +38,7 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
-| Tutorials/EB/CNS/Exec/Combustor | 3 | OK | kernel arguments size 1212 | inputs.regt |
+| Tutorials/EB/CNS/Exec/Combustor | 3 | OK | OK | inputs.regt |
 | Tutorials/EB/MacProj | 2 | OK | kernel argumens size 1480 | inputs amrex.fpe_trap_invalid=0 |
 | Tutorials/EB/MacProj | 3 | OK | kernel argumens size 1212 | inputs amrex.fpe_trap_invalid=0 |
 | Tests/LinearSolvers/EBTensor | 3 | OK | kernel arguments size 1212 | inputs.rt.3d |
