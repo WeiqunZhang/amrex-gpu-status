@@ -8,6 +8,7 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Directory | DIM | Compile | Run | Inputs |
 | ------ | --- | ---------- | ---------- | ---------- |
 | Tutorials/Basic/HelloWorld_C  | 3 | OK | OK |        |
+| Tutorials/HeatEquation_EX1_C/Exec | 2 | OK | OK | inputs |
 | Tutorials/HeatEquation_EX1_C/Exec | 3 | OK | OK | inputs |
 | Tutorials/HeatEquation_EX2_C/Exec | 3 | OK | OK | inputs nsteps=1000 |
 | Tutorials/GPU/Launch | 3 | OK | OK | |
