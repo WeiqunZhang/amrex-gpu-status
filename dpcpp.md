@@ -42,9 +42,9 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tutorials/EB/CNS/Exec/Combustor | 3 | OK | OK | inputs.regt |
 | Tutorials/EB/MacProj | 2 | OK | OK | inputs amrex.fpe_trap_invalid=0 |
 | Tutorials/EB/MacProj | 3 | OK | OK | inputs amrex.fpe_trap_invalid=0 |
-| Tests/LinearSolvers/EBTensor | 3 | OK | slow | inputs.rt.3d verbose=1 |
+| Tests/LinearSolvers/EBTensor | 3 | OK | hang | inputs.rt.3d verbose=1 |
 | Tests/LinearSolvers/NodeEB | 2 | OK | OK | inputs.rt.2d |
-| Tests/LinearSolvers/NodeEB | 3 | OK | slow | inputs.rt.3d.y verbose=1 |
+| Tests/LinearSolvers/NodeEB | 3 | OK | hang | inputs.rt.3d.y verbose=1 |
 
 ## Particles
 
@@ -57,5 +57,5 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tests/Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.sort redistribute.do_random=0 |
 | Tests/Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.nonperiodic redistribute.do_random=0 |
 | Tests/Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.mr redistribute.do_random=0 |
-| Tests/Particles/NeighborParticles | 3 | ADL | | inputs |
+| Tests/Particles/NeighborParticles | 3 | OK | abort | inputs |
 | Tutorials/Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | abort | inputs.tracers |
