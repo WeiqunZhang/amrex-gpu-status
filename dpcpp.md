@@ -71,7 +71,7 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tests/Particles/Redistribute | 3 | OK | OK | inputs.rt.cuda.nonperiodic redistribute.do_random=0 |
 | Tests/Particles/Redistribute | 3 | OK | OK | inputs.rt.cuda.mr redistribute.do_random=0 |
 | Tests/Particles/NeighborParticles | 3 | OK | OK | inputs |
-| Tutorials/Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | OK | inputs.tracers |
+| Tutorials/Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | OK | inputs.tracers particles.do_tiling=0 |
 
 
 # [Incflo](https://github.com/AMReX-Codes/incflo)
