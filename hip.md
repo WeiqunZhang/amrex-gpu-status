@@ -1,5 +1,9 @@
+# HIP Status
 
-# Test Problems in AMReX
+- [AMReX Test Problems](#AMReX-Test-Problems)
+  * [Basic](#Basic)
+
+# AMReX Test Problems
 
 All tests are compiled with `make USE_MPI=FALSE USE_CUDA=FALSE USE_HIP=TRUE DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
