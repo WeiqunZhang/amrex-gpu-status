@@ -8,7 +8,7 @@
 
 - [Incflo](#Incflo)
   * [No EB](#No-EB)
-  * [EB](#EB)
+  * [With EB](#With-EB)
 
 
 # AMReX Test Problems
@@ -86,7 +86,6 @@ make -j 16 USE_MPI=FALSE USE_DPCPP=TRUE
 ./incflo3d.dpcpp.ex benchmark.double_shear_layer_x
 ```
 
-## EB
+## With EB
 
 This compiles, but the run hangs.
-
