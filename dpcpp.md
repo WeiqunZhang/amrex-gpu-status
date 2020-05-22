@@ -1,5 +1,17 @@
 
-# Test Problems in AMReX
+- [AMReX Test Problems](#AMReX-Test-Problems)
+  * [Basic](#Basic)
+  * [AMR](#AMR)
+  * [Linear Solvers](#Linear-Solvers)
+  * [EB](#EB)
+  * [Particles](#Particles)
+
+- [Incflo](#Incflo)
+  * [No EB](#No-EB)
+  * [EB](#EB)
+
+
+# AMReX Test Problems
 
 All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They are run with `./<executable> <Inputs>`.
 
@@ -59,3 +71,22 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tests/Particles/Redistribute | 3 | OK | abort | inputs.rt.cuda.mr redistribute.do_random=0 |
 | Tests/Particles/NeighborParticles | 3 | OK | abort | inputs |
 | Tutorials/Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | abort | inputs.tracers |
+
+
+# [Incflo](https://github.com/AMReX-Codes/incflo)
+
+The `development` branch of `incflo` is used.
+
+## No EB
+
+This compiles and runs to completion.
+```
+cd test_no_eb
+make -j 16 USE_MPI=FALSE USE_DPCPP=TRUE
+./incflo3d.dpcpp.ex benchmark.double_shear_layer_x
+```
+
+## EB
+
+This compiles, but the run hangs.
+
