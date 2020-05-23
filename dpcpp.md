@@ -98,7 +98,12 @@ make -j 16 USE_MPI=FALSE USE_DPCPP=TRUE
 
 ## With EB
 
-This compiles, but the run hangs.
+This compiles and runs to completion.
+```
+cd test
+make -j16 USE_MPI=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE
+./incflo3d.dpcpp.ex benchmark.channel_cylinder-x
+```
 
 
 # [WarpX](https://github.com/ECP-WarpX/WarpX/)
