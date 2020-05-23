@@ -59,7 +59,7 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tutorials/EB/MacProj | 3 | OK | OK | inputs amrex.fpe_trap_invalid=0 |
 | Tests/LinearSolvers/EBTensor | 3 | OK | *hang* | inputs.rt.3d |
 | Tests/LinearSolvers/NodeEB | 2 | OK | OK | inputs.rt.2d |
-| Tests/LinearSolvers/NodeEB | 3 | OK | OK [1](#footnote1) | inputs.rt.3d.y |
+| Tests/LinearSolvers/NodeEB | 3 | OK | OK <sup>[1](#footnote1)</sup> | inputs.rt.3d.y |
 
 <a name="footnote1">[1]</a>: The compiler has trouble JIT-compiling
 the `mlndlap_stencil_rap` function.  We have to disable GPU launch for
