@@ -11,6 +11,8 @@
   * [No EB](#No-EB)
   * [With EB](#With-EB)
 
+- [WarpX](#WarpX)
+  * [Langmuir 2d](#Langmuir-2d)
 
 # AMReX Test Problems
 
@@ -90,3 +92,19 @@ make -j 16 USE_MPI=FALSE USE_DPCPP=TRUE
 ## With EB
 
 This compiles, but the run hangs.
+
+
+# [WarpX](https://github.com/ECP-WarpX/WarpX/)
+
+WarpX is not fully functional with DPC++ yet, because DPC++ does not
+yet support recursive device function and device API for random number
+generation.  The spectral solver using FFT also has not been ported.
+
+## Langmuir 2d
+
+This test compiles and produces correct results.
+```
+make -j16 USE_MPI=FALSE USE_OMP=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE DIM=2
+Bin/main2d.dpcpp.TPROF.ex Examples/Tests/Langmuir/inputs_3d_rt electrons.ux=0.01 electrons.xmax=0.e-6
+```
+
