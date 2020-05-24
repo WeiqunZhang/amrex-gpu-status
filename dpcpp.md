@@ -11,8 +11,12 @@
   * [No EB](#No-EB)
   * [With EB](#With-EB)
 
+- [MFiX-Exa](#MFix-Exa)
+  * [BENCH01-Size0001](#BENCH01-Size0001)
+
 - [WarpX](#WarpX)
   * [Langmuir 2d](#Langmuir-2d)
+
 
 # AMReX Test Problems
 
@@ -103,6 +107,23 @@ This compiles and runs to completion.
 cd test
 make -j16 USE_MPI=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE
 ./incflo3d.dpcpp.ex benchmark.channel_cylinder-x
+```
+
+
+# [MFiX-Exa](https://amrex-codes.github.io/MFIX-Exa/)
+
+Some EB types do not work with DPC++ yet.  Due to the lack of device
+API for random number generator in oneAPI, those particle
+initialization methods using RNG do not work.
+
+## BENCH01-Size0001
+
+This test compiles and produces correct results.
+```
+cd exec
+make -j16 USE_MPI=FALSE USE_DPCPP=TRUE
+cd ../benchmarks/01-HCS/Size0001
+../../../exec/mfix3d.gnu.ex inputs
 ```
 
 
