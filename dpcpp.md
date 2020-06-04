@@ -61,16 +61,12 @@ All tests are compiled with `make USE_MPI=FALSE USE_DPCPP=TRUE DIM=<DIM>`.  They
 | Tutorials/EB/CNS/Exec/Combustor | 3 | OK | OK | inputs.regt |
 | Tutorials/EB/MacProj | 2 | OK | OK | inputs amrex.fpe_trap_invalid=0 |
 | Tutorials/EB/MacProj | 3 | OK | OK | inputs amrex.fpe_trap_invalid=0 |
-| Tests/LinearSolvers/EBTensor | 3 | OK | OK <sup>[1](#footnote1)</sup> | inputs.rt.3d |
+| Tests/LinearSolvers/EBTensor | 3 | OK | OK | inputs.rt.3d |
 | Tests/LinearSolvers/NodeEB | 2 | OK | OK | inputs.rt.2d |
-| Tests/LinearSolvers/NodeEB | 3 | OK | OK <sup>[2](#footnote2)</sup> | inputs.rt.3d.y |
+| Tests/LinearSolvers/NodeEB | 3 | OK | OK <sup>[1](#footnote1)</sup> | inputs.rt.3d.y |
 
-<a name="footnote1">[1]</a>: We have to dsable GPU launch in
-`MLEBTensorOp::apply`, othewise the run hangs.
-
-<a name="footnote1">[2]</a>: The compiler has trouble JIT-compiling
-the `mlndlap_stencil_rap` function.  We have to disable GPU launch for
-that function.
+<a name="footnote1">[1]</a>: The compiler has trouble JIT-compiling the `mlndlap_stencil_rap`
+function.  We have to disable GPU launch for that function.
 
 ## Particles
 
@@ -112,9 +108,8 @@ make -j16 USE_MPI=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE
 
 # [MFiX-Exa](https://amrex-codes.github.io/MFIX-Exa/)
 
-Some EB types do not work with DPC++ yet.  Due to the lack of device
-API for random number generator in oneAPI, those particle
-initialization methods using RNG do not work.
+Some EB types do not work with DPC++ yet.  Due to the lack of device API for random number generator
+in oneAPI, those particle initialization methods using RNG do not work.
 
 ## BENCH01-Size0001
 
@@ -129,9 +124,9 @@ cd ../benchmarks/01-HCS/Size0001
 
 # [WarpX](https://github.com/ECP-WarpX/WarpX/)
 
-WarpX is not fully functional with DPC++ yet, because DPC++ does not
-yet support recursive device function and device API for random number
-generation.  The spectral solver using FFT also has not been ported.
+WarpX is not fully functional with DPC++ yet, because DPC++ does not yet support recursive device
+function and device API for random number generation.  The spectral solver using FFT also has not
+been ported.
 
 ## Langmuir 2d
 
