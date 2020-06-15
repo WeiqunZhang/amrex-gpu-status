@@ -7,6 +7,9 @@
   * [EB](#EB)
   * [Particles](#Particles)
 
+- [AMR-Wind](#AMR-Wind)
+  * ABL Godunov
+
 - [Incflo](#Incflo)
   * [No EB](#No-EB)
   * [With EB](#With-EB)
@@ -83,6 +86,27 @@ function.  We have to disable GPU launch for that function.
 | Tests/Particles/NeighborParticles | 3 | OK | OK | inputs |
 | Tutorials/Amr/Advection_AmrLevel/Exec/SingleVortex | 2 | OK | OK | inputs.tracers particles.do_tiling=0 |
 
+
+# [AMR-Wind](https://github.com/Exawind/amr-wind)
+
+AMR-Wind uses AMReX as a submodule and requires cmake >= 14 to build.  You can clone AMR-Wind (my
+fork with minor changes) and compile as follows,
+```
+git clone --recursive https://github.com/WeiqunZhang/amr-wind.git
+cd amre-wind
+mkdir build
+cd build
+cmake -DCMAKE_CXX_COMPILER=dpcpp -DENABLE_DPCPP=yes ..
+make -j12 amr_wind
+```
+
+## ABL Godunov
+
+To run this test,
+```
+./amr_wind ../test/test_files/abl_godunov/abl_godunov.i amr.n_cell="128 128 128" time.max_step=10
+
+```
 
 # [Incflo](https://github.com/AMReX-Codes/incflo)
 
