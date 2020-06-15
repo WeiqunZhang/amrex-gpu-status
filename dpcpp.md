@@ -153,8 +153,11 @@ This test compiles and produces correct results.
 ```
 cd exec
 make -j16 USE_MPI=FALSE USE_DPCPP=TRUE
-cd ../benchmarks/01-HCS/Size0008
-../../../exec/mfix3d.dpcpp.ex inputs
+cd ../benchmarks/01-HCS
+gfortran par-gen.f90
+./a.out  # This only needs to be run once to generate files needed by tests under this directory.
+cd Size0008
+../../../exec/mfix3d.dpcpp.ex inputs max_step=20
 ```
 
 # [WarpX](https://github.com/ECP-WarpX/WarpX/)
