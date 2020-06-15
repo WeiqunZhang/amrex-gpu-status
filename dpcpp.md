@@ -16,6 +16,7 @@
 
 - [MFiX-Exa](#MFix-Exa)
   * [BENCH01-Size0001](#BENCH01-Size0001)
+  * [BENCH01-Size0008](#BENCH01-Size0008)
 
 - [WarpX](#WarpX)
   * [Langmuir 2d](#Langmuir-2d)
@@ -104,7 +105,7 @@ make -j12 amr_wind
 
 To run this test,
 ```
-./amr_wind ../test/test_files/abl_godunov/abl_godunov.i amr.n_cell="128 128 128" time.max_step=10
+./amr_wind ../test/test_files/abl_godunov/abl_godunov.i amr.n_cell="128 128 128" amr.max_grid_size=64 time.max_step=10
 
 ```
 
@@ -146,6 +147,15 @@ cd ../benchmarks/01-HCS/Size0001
 ../../../exec/mfix3d.gnu.ex inputs
 ```
 
+## BENCH01-Size0008
+
+This test compiles and produces correct results.
+```
+cd exec
+make -j16 USE_MPI=FALSE USE_DPCPP=TRUE
+cd ../benchmarks/01-HCS/Size0008
+../../../exec/mfix3d.gnu.ex inputs
+```
 
 # [WarpX](https://github.com/ECP-WarpX/WarpX/)
 
