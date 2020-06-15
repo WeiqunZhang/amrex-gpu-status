@@ -144,7 +144,7 @@ This test compiles and produces correct results.
 cd exec
 make -j16 USE_MPI=FALSE USE_DPCPP=TRUE
 cd ../benchmarks/01-HCS/Size0001
-../../../exec/mfix3d.gnu.ex inputs
+../../../exec/mfix3d.dpcpp.ex inputs
 ```
 
 ## BENCH01-Size0008
@@ -154,7 +154,7 @@ This test compiles and produces correct results.
 cd exec
 make -j16 USE_MPI=FALSE USE_DPCPP=TRUE
 cd ../benchmarks/01-HCS/Size0008
-../../../exec/mfix3d.gnu.ex inputs
+../../../exec/mfix3d.dpcpp.ex inputs
 ```
 
 # [WarpX](https://github.com/ECP-WarpX/WarpX/)
