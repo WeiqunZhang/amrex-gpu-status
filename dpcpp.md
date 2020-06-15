@@ -16,6 +16,7 @@
 
 - [WarpX](#WarpX)
   * [Langmuir 2d](#Langmuir-2d)
+  * [Langmuir 3d](#Langmuir-3d)
 
 
 # AMReX Test Problems
@@ -126,7 +127,7 @@ cd ../benchmarks/01-HCS/Size0001
 
 WarpX is not fully functional with DPC++ yet, because DPC++ does not yet support recursive device
 function and device API for random number generation.  The spectral solver using FFT also has not
-been ported.
+been ported.  To run WarpX, one also needs to clone https://bitbucket.org/berkeleylab/picsar.git.
 
 ## Langmuir 2d
 
@@ -136,3 +137,10 @@ make -j16 USE_MPI=FALSE USE_OMP=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE DIM=2
 Bin/main2d.dpcpp.TPROF.ex Examples/Tests/Langmuir/inputs_3d_rt electrons.ux=0.01 electrons.xmax=0.e-6
 ```
 
+## Langmuir 3d
+
+This test compiles and produces correct results.
+```
+make -j16 USE_MPI=FALSE USE_OMP=FALSE USE_CUDA=FALSE USE_DPCPP=TRUE DIM=3
+Bin/main3d.dpcpp.TPROF.ex Examples/Tests/Langmuir/inputs_3d_rt electrons.ux=0.01 electrons.xmax=0.e-6 max_step=10 amr.n_cell="128 128 128" amr.max_grid_size=128
+```
